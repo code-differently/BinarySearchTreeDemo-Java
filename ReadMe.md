@@ -5,7 +5,7 @@
 * When you think of a tree the most common occurance that we see on a daily basis is our file directories, where we have subdirectires, and files in a tree like structure.
 * A binary search tree is a binary tree with one more restriction: All children to the left of a node have smaller values, whereas all children to the right will have larger values.
 
-[](./images/image01.png)
+[](/images/image01.png)
 
 * If a tree is balanced the average search time is directly proportialn to its height: O(h). In the above example the longes path from the root node to a leaf is three, so you can expect the average search time of O(3).
 * Remeber that constants don't matter so the average seach time could be reduced to O(1).
