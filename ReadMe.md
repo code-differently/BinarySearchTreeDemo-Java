@@ -5,7 +5,7 @@
 * When you think of a tree the most common occurance that we see on a daily basis is our file directories, where we have subdirectires, and files in a tree like structure.
 * A binary search tree is a binary tree with one more restriction: All children to the left of a node have smaller values, whereas all children to the right will have larger values.
 
-![](images/image01.png)
+[](images/image01.png)
 
 * If a tree is balanced the average search time is directly proportialn to its height: O(h). In the above example the longes path from the root node to a leaf is three, so you can expect the average search time of O(3).
 * Remeber that constants don't matter so the average seach time could be reduced to O(1).
@@ -20,7 +20,7 @@
 
 ## Successor
 
-![](images/image01.png)
+[](images/image01.png)
 
 * A node’s successor is the one with the next largest value in the tree. For example, given the tree shown:
 	* The successor of A is D
@@ -30,7 +30,7 @@
 
 ## Predecessor
 
-![](images/image01.png)
+[](images/image01.png)
 
 * The predecessor of a node is the one with the next smallest value. For example, the predecessor of P is M,the predecessor of F is D, and the predecessor of I is H.* The algorithm for finding the predecessor is essentially the inverse of what you’d use for the successor,and it involves two similar cases. In the first case, if a node has a left child, then you take its maximum.In the second case—whereby the node has no left child—you work up the tree until you find a “lefthand”turn.
 
@@ -48,15 +48,15 @@
 * In the below example it shows how you would search for the letter K in the binary search tree.
 * Starting with the root node (step 1), you compare your search value, K, with the letter I
 
-	![](images/image02.png)
+	[](images/image02.png)
 
 * Because K comes before I, you follow the right link (step 6), which leads you to the node containing the letter L 
 
-![](images/image03.png)
+[](images/image03.png)
 
 * You still don’t have a match, but because K is smaller than L, you follow the left link (step 5).
 
-![](images/image04.png)
+[](images/image04.png)
 
 * Finally, you have a match: The search value is the same as the value at the current node (step 4), and your search completes. You searched a tree containing nine values and found the one you were looking for in only three comparisons. In addition, note that you found the match three levelsdown in the tree—O(h).* Each time you move down the tree, you effectively discard half the values—just as you do when performing a binary search of a sorted list. In fact, given a sorted list, you can easily construct the equivalentbinary search tree.
 
@@ -64,13 +64,13 @@
 
 * Insertion is nearly identical to searching except that when the value doesn’t exist, it is added to the treeas a leaf node. In the previous search example, if you had wanted to insert the value J, you would havefollowed the left link from K and discovered that there were no more nodes. Therefore, you could safelyadd the J as the left child of K.
 
-![](images/image05.png)
+[](images/image05.png)
 
 * The newly inserted value was added as a leaf, which in this case hasn’t affected the height of the tree.
 * Inserting relatively random data usually enables the tree to maintain its O(log N) height, but what happenswhen you insert nonrandom data such as a word list from a dictionary or names from a telephonedirectory? 
 * Can you imagine what would happen if you started with an empty tree and inserted the followingvalues in alphabetical order: A, D, F, H, I, K, L, M, and P?
 
-![](images/image06.png)
+[](images/image06.png)
 
 * Considering that new values are always inserted as leaf nodes, and remembering that all larger valuesbecome right children of their parent, inserting the values in ascending order leads to a severely unbalancedtree.
 
@@ -84,7 +84,7 @@
 
 * Here is a tree that needs rebalancing. Notice that the root node’s children differ in height by two.
 
-![](images/image07.png)
+[](images/image07.png)
 
 * After an imbalance has been detected, you need to correct it, but how? The solution involves rotatingnodes to remove the imbalance. You perform this rebalancing by working up the tree from the inserted/deleted node to the root, rotating nodes as necessary anytime a node is inserted or deleted from anAVL tree.* There are four different types of rotation depending on the nature of the imbalance: a single rotation anda double rotation, each with a left and right version. The table shows you how to determine whether asingle or a double rotation is required.
 
@@ -95,7 +95,7 @@
 
 # The Unit Test 
 
-![](images/image01.png)
+[](images/image01.png)
 
 
 The NodeTest class defines some instance variables—one for each node shown above and initializes them in setUp() for use by the test cases. The first four nodes are all leaf nodes and as such need only the value. The remaining nodes all have left and/or right children, which are passed in as the second and third constructor parameters, respectively: 
